@@ -1,7 +1,10 @@
 page-chat {
+  img{
+    display: none;
+  }
 
-  $userBackgroundColor: #f53d3d;
-  $toUserBackgroundColor: #fff;
+  $userBackgroundColor: #ec0000;
+  $toUserBackgroundColor: white;
 
   ion-content .scroll-content {
     background-color: #f5f5f5;
@@ -52,6 +55,7 @@ page-chat {
       .msg-detail {
         width: 100%;
         display: inline-block;
+        padding: 15px !important;
         p {
           margin: 0;
         }
@@ -68,29 +72,14 @@ page-chat {
           border-radius: 5px;
           padding: 8px;
           border: 1px solid #ddd;
-          color: #fff;
+          color: grey;
           width: auto;
           max-width: 80%;
-          span.triangle {
-            background-color: #fff;
-            border-radius: 2px;
-            height: 8px;
-            width: 8px;
-            top: 12px;
-            display: block;
-            border-style: solid;
-            border-color: #ddd;
-            border-width: 1px;
-            -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-            position: absolute;
-          }
         }
 
       }
     }
 
-    .message.left {
       .msg-content {
         background-color: $toUserBackgroundColor;
         float: left;
@@ -103,16 +92,12 @@ page-chat {
       }
       .msg-content {
         color: #343434;
-        span.triangle {
-          border-top-width: 0;
-          border-right-width: 0;
-          left: -5px;
-        }
       }
 
-    }
-
     .message.right {
+      .msg-content {
+        color: white;
+      }
       .msg-detail {
         padding-right: 60px;
         .msg-info {

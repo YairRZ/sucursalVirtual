@@ -55,7 +55,8 @@ export class Chat {
         userAvatar: this.user.avatar,
         toUserId: this.toUser.id,
         time: Date.now(),
-        message: this.messages.answers[0].answer+""
+        message: this.messages.answers[0].answer+"",
+        status: ""
       };
 
 
