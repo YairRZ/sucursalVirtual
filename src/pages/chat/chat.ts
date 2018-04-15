@@ -36,13 +36,32 @@ export class Chat {
     .then((res) => {
       this.user = res
     });
-    //addMessage();
   }
 
-  addMessage() {
-    this.restProvider.addMessage({"question":"QUE ES UNA TARJETA DE CREDITO?"})
+  addMessage(q) {
+
+    
+
+    console.log("la pregunta es:" + q);
+    this.restProvider.addMessage({"question": q+""})
     .then(data => {
+      const id = Date.now().toString();
       this.messages = data;
+
+      let newMsg: ChatMessage = {
+        messageId: Date.now().toString(),
+        userId: this.user.id+1,
+        userName: "Santander",
+        userAvatar: this.user.avatar,
+        toUserId: this.toUser.id,
+        time: Date.now(),
+        message: this.messages.answers[0].answer+""
+      };
+
+
+      
+
+      this.msgList.push(newMsg);
       console.log(this.messages);
     });
   }
@@ -100,7 +119,6 @@ export class Chat {
    * @name sendMsg
    */
   sendMsg() {
-    this.addMessage();
     if (!this.editorMsg.trim()) return;
 
     // Mock message
@@ -119,6 +137,7 @@ export class Chat {
     this.pushNewMsg(newMsg);
     this.editorMsg = '';
 
+    
     if (!this.showEmojiPicker) {
       this.focus();
     }
@@ -128,6 +147,8 @@ export class Chat {
       let index = this.getMsgIndexById(id);
       if (index !== -1) {
         this.msgList[index].status = 'success';
+        this.addMessage(newMsg.message);
+
       }
     })
   }
@@ -141,6 +162,7 @@ export class Chat {
       toUserId = this.toUser.id;
     // Verify user relationships
     if (msg.userId === userId && msg.toUserId === toUserId) {
+      console.log(msg);
       this.msgList.push(msg);
     } else if (msg.toUserId === userId && msg.userId === toUserId) {
       this.msgList.push(msg);
