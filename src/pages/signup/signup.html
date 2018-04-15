@@ -8,7 +8,6 @@
 
 
 <ion-content>
-  <form (submit)="doSignup()">
     <ion-list>
 
       <ion-item>
@@ -46,9 +45,8 @@
 
 
       <div padding>
-        <button ion-button color="primary" block>Crear Cuenta</button>
+        <button ion-button color="primary" block (click)="confirmacion()">Siguiente</button>
       </div>
 
     </ion-list>
-  </form>
 </ion-content>
