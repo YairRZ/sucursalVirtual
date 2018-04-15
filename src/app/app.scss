@@ -45,3 +45,33 @@
 }
 
 
+
+.toolbar-background-md {
+    background: #bf0000;
+    
+}
+.toolbar-title-md{
+	color: #f0f0f0;
+}
+.tabs-md .tab-button[aria-selected=true] {
+    color:  #bf0000;
+    background: #f0f0f0;
+
+ }  
+.tabs-md .tab-button{
+	color: #f0f0f0;
+	background: #bf0000;
+}
+
+.tabs-md .tab-button[aria-selected=true] .tab-button-icon{
+	color:  #bf0000;
+}
+
+.tabs-md .tab-button .tab-button-icon{
+	color: #f0f0f0;
+}
+.bar-button-default-md, .bar-button-default.bar-button-md-default, .bar-button-clear-md-default {
+    color: #f0f0f0;
+    background-color: transparent;
+}
+
