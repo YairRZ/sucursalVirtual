@@ -9,6 +9,11 @@ page-welcome {
     animation: animatedBackground 40s linear infinite;
   }
 
+  .content-ios {text-color:        #fff;
+  background-color:  #bf0000;
+  color: #f0f0f0 ;
+  }
+
   @keyframes animatedBackground {
     from { background-position: 0 0; }
     to { background-position: 100% 0; }
@@ -22,7 +27,7 @@ page-welcome {
   }
   .splash-logo {
     margin: auto;
-    background: url('../assets/img/appicon.png') repeat transparent;
+    background: url('../assets/img/logo.png') repeat transparent;
     background-size: 100%;
     width: 128px;
     height: 128px;
