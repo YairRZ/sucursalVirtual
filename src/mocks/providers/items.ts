@@ -16,39 +16,49 @@ export class Items {
   constructor() {
     let items = [
       {
-        "name": "Burt Bear",
-        "profilePic": "assets/img/speakers/bear.jpg",
-        "about": "Burt is a Bear."
+        "name": "Santander Black Unlimited",
+        "profilePic": "assets/img/speakers/1.jpg",
+        "about": "Programa de Recompensas: 2 puntos por dólar gastadoBono de Bienvenida por 20,000 puntos 4 niveles de blindaje"
       },
       {
-        "name": "Charlie Cheetah",
-        "profilePic": "assets/img/speakers/cheetah.jpg",
-        "about": "Charlie is a Cheetah."
+        "name": "Santander Fiesta Rewards Platino",
+        "profilePic": "assets/img/speakers/2.jpg",
+        "about": "Nivel de socio Fiesta Rewards Platino. Beneficios por Bienvenida, Aniversario y Consumo. Acumulación de Puntos Fiesta Rewards. Priority Pass."
       },
       {
-        "name": "Donald Duck",
-        "profilePic": "assets/img/speakers/duck.jpg",
-        "about": "Donald is a Duck."
+        "name": "Santander Fiesta Rewards Oro",
+        "profilePic": "assets/img/speakers/3.jpg",
+        "about": "Nivel de socio Fiesta Rewards Oro. Beneficios por Bienvenida, Aniversario y Consumo. Acumulación de Puntos Fiesta Rewards. Tarjetas adicionales sin costo (por promoción)"
       },
       {
-        "name": "Eva Eagle",
-        "profilePic": "assets/img/speakers/eagle.jpg",
-        "about": "Eva is an Eagle."
+        "name": "Santander American Express",
+        "profilePic": "assets/img/speakers/4.jpg",
+        "about": "Acumulación de Puntos Recompensas por giro de comercio. Bono extra de triples puntos en compras a Meses sin Intereses. Tarjetas adicionales sin costo (por promoción)"
       },
       {
-        "name": "Ellie Elephant",
-        "profilePic": "assets/img/speakers/elephant.jpg",
-        "about": "Ellie is an Elephant."
+        "name": "Santander Light",
+        "profilePic": "assets/img/speakers/5.jpg",
+        "about": "Intereses bajos. Tarjetas adicionales sin costo (por promoción)"
+      },
+       {
+        "name": "Santander Free",
+        "profilePic": "assets/img/speakers/6.jpg",
+        "about": "Sin cuota anual. Sin costo un plan de beneficios a elección: Recompensas Básico, Plan Viajero o Plan Seguridad."
       },
       {
-        "name": "Molly Mouse",
-        "profilePic": "assets/img/speakers/mouse.jpg",
-        "about": "Molly is a Mouse."
+        "name": "Santander Zero",
+        "profilePic": "assets/img/speakers/7.jpg",
+        "about": "Sin cuota anual. Sin comprobantes de ingresos para estudiantes menores de 25 años. Programa de Recompensas Básico."
       },
       {
-        "name": "Paul Puppy",
-        "profilePic": "assets/img/speakers/puppy.jpg",
-        "about": "Paul is a Puppy."
+        "name": "Santander Aeroméxico Infinite",
+        "profilePic": "assets/img/speakers/8.jpg",
+        "about": "Accesos ilimitados a Salón Premier, ascensos a Cabina Premier* y Priority Pass. Documentación y abordaje SkyPriority."
+      },
+      {
+        "name": "Santander Aeroméxico Platinum",
+        "profilePic": "assets/img/speakers/9.jpg",
+        "about": "Bonos de bienvenida y de gasto anual. Acumulación de Puntos Premier en tus compras.."
       }
     ];
 
