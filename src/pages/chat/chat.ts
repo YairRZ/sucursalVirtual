@@ -2,6 +2,8 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 import { IonicPage,  NavController, NavParams } from 'ionic-angular';
 import { Events, Content } from 'ionic-angular';
 import { ChatService, ChatMessage, UserInfo } from "../../providers/chat-service";
+import { RestProvider } from '../../providers/rest/rest';
+
 
 @IonicPage()
 @Component({
@@ -18,9 +20,12 @@ export class Chat {
   editorMsg = '';
   showEmojiPicker = false;
 
+  messages: any;
+
   constructor(navParams: NavParams,
               private chatService: ChatService,
-              private events: Events, public navCtrl: NavController) {
+              private events: Events, public navCtrl: NavController, 
+              public restProvider: RestProvider) {
     // Get the navParams toUserId parameter
     this.toUser = {
       id: navParams.get('toUserId'),
@@ -31,7 +36,17 @@ export class Chat {
     .then((res) => {
       this.user = res
     });
+    //addMessage();
   }
+
+  addMessage() {
+    this.restProvider.addMessage({"question":"QUE ES UNA TARJETA DE CREDITO?"})
+    .then(data => {
+      this.messages = data;
+      console.log(this.messages);
+    });
+  }
+
   listmaster() {
     this.navCtrl.push('ListMasterPage');
   }
@@ -85,6 +100,7 @@ export class Chat {
    * @name sendMsg
    */
   sendMsg() {
+    this.addMessage();
     if (!this.editorMsg.trim()) return;
 
     // Mock message
