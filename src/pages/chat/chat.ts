@@ -1,5 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { IonicPage, NavParams } from 'ionic-angular';
+import { IonicPage,  NavController, NavParams } from 'ionic-angular';
 import { Events, Content } from 'ionic-angular';
 import { ChatService, ChatMessage, UserInfo } from "../../providers/chat-service";
 
@@ -20,7 +20,7 @@ export class Chat {
 
   constructor(navParams: NavParams,
               private chatService: ChatService,
-              private events: Events,) {
+              private events: Events, public navCtrl: NavController) {
     // Get the navParams toUserId parameter
     this.toUser = {
       id: navParams.get('toUserId'),
@@ -32,7 +32,9 @@ export class Chat {
       this.user = res
     });
   }
-
+  listmaster() {
+    this.navCtrl.push('ListMasterPage');
+  }
   ionViewWillLeave() {
     // unsubscribe
     this.events.unsubscribe('chat:received');
