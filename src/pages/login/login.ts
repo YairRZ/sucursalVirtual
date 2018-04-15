@@ -32,6 +32,10 @@ export class LoginPage {
     })
   }
 
+  /*login2() {
+    this.navCtrl.push('Login2Page');
+  }*/
+
   // Attempt to login in through our User service
   doLogin() {
     this.user.login(this.account).subscribe((resp) => {
@@ -46,5 +50,9 @@ export class LoginPage {
       });
       toast.present();
     });
+
+  
+
+    
   }
 }
