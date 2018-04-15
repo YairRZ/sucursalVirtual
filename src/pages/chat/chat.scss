@@ -1,5 +1,6 @@
-page-main {
- $userBackgroundColor: #387ef5;
+page-chat {
+
+  $userBackgroundColor: #f53d3d;
   $toUserBackgroundColor: #fff;
 
   ion-content .scroll-content {
@@ -11,7 +12,15 @@ page-main {
     background-color: #fff;
     height: 255px;
   }
-
+  .splash-intro {
+    font-size: 18px;
+    font-weight: bold;
+    max-width: 80%;
+    margin: auto;
+  }
+   #splash-cuenta{
+    text-align: center;
+  }
   .line-breaker {
     white-space: pre-line;
   }
